@@ -22,7 +22,7 @@ try:
   # ~~~~ INSERT CODE ~~~~
   serverPort=12000
 
-  serverSocket=socket(AF_INET,SOCK_STREAM)#ipv4 TCP
+  serverSocket=socket.socket(socket.AF_INET,socket.SOCK_STREAM)#ipv4 TCP
   # ~~~~ END CODE INSERT ~~~~
   print ('Created socket')
 except:
@@ -136,7 +136,7 @@ while True:
     # and store in originServerSocket
     # ~~~~ INSERT CODE ~~~~
     
-    originServerSocket=socket(AF_INET, SOCK_STREAM)
+    originServerSocket=socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     # ~~~~ END CODE INSERT ~~~~
 
     print ('Connecting to:\t\t' + hostname + '\n')
