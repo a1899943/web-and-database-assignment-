@@ -16,13 +16,15 @@ args = parser.parse_args()
 proxyHost = args.hostname
 proxyPort = int(args.port)
 
+
 # Create a server socket, bind it to a port and start listening
 try:
   # Create a server socket
   # ~~~~ INSERT CODE ~~~~
-  serverPort=12000
+  
 
   serverSocket=socket.socket(socket.AF_INET,socket.SOCK_STREAM)#ipv4 TCP
+  
   # ~~~~ END CODE INSERT ~~~~
   print ('Created socket')
 except:
@@ -32,7 +34,8 @@ except:
 try:
   # Bind the the server socket to a host and port
   # ~~~~ INSERT CODE ~~~~
-  serverSocket.bind(proxyHost,proxyPort)
+  serverSocket.bind('',proxyPort)
+ 
   
   # ~~~~ END CODE INSERT ~~~~
   print ('Port is bound')
